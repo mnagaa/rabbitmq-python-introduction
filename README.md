@@ -30,7 +30,7 @@ $ python producer.py
 ## Check it
 
 Now go to http://localhost:15672/. \
-You will see the monitoring/admin pages.
+You will see the monitoring/admin pages with `Username: guest` and `Password: guest`.
 
 
 ## Further information
