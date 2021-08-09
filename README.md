@@ -1,8 +1,8 @@
 # rabbitmq-python-introduction
 
-This repository introduces Python implementation of [RabbitMQ](https://www.rabbitmq.com/) with [Docker](https://www.docker.com/). \
-In this project, Python 3.7 is adopted because some ML libraries don't support the latest versions (e.g., Python 3.8, 3.9). \
-If you want to know for detail, you should see the [official site](https://www.rabbitmq.com/).
+This repository introduces Python implementation of [RabbitMQ](https://www.rabbitmq.com/) with [Docker](https://www.docker.com/) for the sake of Machine Learning tasks. \
+Python 3.7 is adopted in this project because some ML libraries don't support the latest versions (e.g., Python 3.8, 3.9). \
+If you want to know for details, you should see the [official site](https://www.rabbitmq.com/).
 
 
 ## Starting docker containers
