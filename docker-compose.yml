@@ -1,0 +1,41 @@
+version: '3'
+services:
+  rabbitmq:
+    image: rabbitmq:3-management
+    container_name: rabbitmq
+    hostname: rabbitmq
+    restart: always
+    volumes:
+      - ./rabbitmq/etc:/etc/rabbitmq/rabbitmq
+      - ./rabbitmq/data:/var/lib/rabbitmq/mnesia/rabbit@my-rabbit
+      - ./rabbitmq/logs:/var/log/rabbitmq/log
+    ports:
+      - "5672:5672"
+      - "15672:15672"
+
+  consumer:
+    build:
+      context: .
+      dockerfile: ./consumer/Dockerfile
+    container_name: consumer
+    hostname: consumer
+    restart: always
+    working_dir: /consumer
+    command: python consumer.py
+    tty: true
+    volumes:
+      - ./consumer:/consumer
+    ports:
+      - "6666:6666"
+
+  producer:
+    build:
+      context: .
+      dockerfile: ./producer/Dockerfile
+    container_name: producer
+    hostname: producer
+    restart: always
+    working_dir: /producer
+    tty: true
+    volumes:
+      - ./producer:/producer
