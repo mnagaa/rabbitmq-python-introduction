@@ -47,6 +47,9 @@ class Consumer(ConsumeManager):
             body = ast.literal_eval(body)
             print(f'queue_name: {self.queue_name}, body: {body}')
             # time.sleep(3)
+            """
+            start ML task here.
+            """
 
             # test
             # raise Exception('raise Exception')

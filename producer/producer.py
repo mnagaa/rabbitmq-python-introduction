@@ -45,7 +45,7 @@ class Producer(ProduceManager):
 
 if __name__ == '__main__':
 
-    # Create Queues
+    # Queues
     task1 = Task(queue_name='task1')
     task2 = Task(queue_name='task2')
 
